@@ -8,7 +8,7 @@ import java.util.concurrent.Future;
 
 public class Main {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        final ExecutorService executorService = Executors.newSingleThreadExecutor();
+        final ExecutorService executorService = Executors.newCachedThreadPool();
         Future<Void> f1 =
                 executorService.submit(
                         new Callable<Void>() {
